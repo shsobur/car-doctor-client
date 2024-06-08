@@ -1,0 +1,98 @@
+.main_hero_parant_container {
+  height: auto;
+  width: 100%;
+}
+
+.main_inner_hero_container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.slider_btn_one {
+  color: #ffffff;
+  background-color: #ff3811;
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.slider_btn_one:hover {
+  background-color: #b92c10;
+}
+
+.slider_btn_two {
+  color: #ffffff;
+  background-color: transparent;
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid white;
+}
+
+.slider_btn_two:hover {
+  background-color: #0000002a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 2560px) {
+  .main_inner_hero_container {
+    max-width: 1536px;
+  }
+}
+
+
+@media screen and (max-width: 1536px) {
+  .main_inner_hero_container {
+    max-width: 1280px;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .main_inner_hero_container {
+    max-width: 1024px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .main_inner_hero_container {
+    max-width: 768px;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .main_inner_hero_container {
+    max-width: 640px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .main_inner_hero_container {
+    max-width: 475px;
+  }
+}
+
+
+
+@media screen and (max-width: 475px) {
+  .main_inner_hero_container {
+    width: 100%;
+    padding: 0 5px 0 5px;
+  }
+}
