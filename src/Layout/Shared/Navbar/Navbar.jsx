@@ -6,6 +6,7 @@ const Navbar = () => {
   return (
     <div className="main_navbar_parent_container">
       <div className="main_navbar_inner_container navbar bg-base-100">
+
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -96,6 +97,7 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
+
         <div className="navbar-center hidden lg:flex">
           <ul className="navbar_routs_list px-1">
             <NavLink
@@ -160,11 +162,13 @@ const Navbar = () => {
             </NavLink>
           </ul>
         </div>
+
         <div className="navbar-end">
           <div className="navbar_button_container">
             <button>Appointment</button>
           </div>
         </div>
+
       </div>
     </div>
   );
