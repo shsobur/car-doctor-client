@@ -1,0 +1,122 @@
+.main_login_parent_container {
+  height: auto;
+  width: 100%;
+}
+
+.login_inner_container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 30px 0 30px 0;
+}
+
+.login_content_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.login_image_container {
+  height: 400px;
+  width: 50%;
+}
+
+.login_image_container img {
+  height: 100%;
+  width: 100%;
+}
+
+.login_form_container {
+  height: 100%;
+  width: 50%;
+  border-radius: 8px;
+  border: 1px solid #141414;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 2560px) {
+  .login_inner_container {
+    max-width: 1536px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1536px) {
+  .login_inner_container {
+    max-width: 1280px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+  .login_inner_container {
+    max-width: 1024px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .login_inner_container {
+    max-width: 768px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .login_inner_container {
+    max-width: 640px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 640px) {
+  .login_inner_container {
+    max-width: 475px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 475px) {
+  .login_inner_container {
+    width: 100%;
+    padding: 0 5px 0 5px;
+  }
+}

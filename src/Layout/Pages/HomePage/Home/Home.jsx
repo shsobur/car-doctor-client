@@ -1,3 +1,4 @@
+import Footer from "../../../Shared/Footer/Footer";
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import Service from "../Service/Service";
@@ -8,7 +9,7 @@ const Home = () => {
       <Banner></Banner>
       <AboutUs></AboutUs>
       <Service></Service>
-      <h2>Hello World</h2>
+      <Footer></Footer>
     </div>
   );
 };

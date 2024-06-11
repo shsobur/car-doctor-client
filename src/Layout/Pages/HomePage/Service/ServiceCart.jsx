@@ -6,6 +6,7 @@ const ServiceCart = ({service}) => {
 
   return (
     <div className="card bg-base-100 shadow-xl">
+
       <figure className="px-5 pt-5">
         <img
           src={img}
@@ -13,6 +14,7 @@ const ServiceCart = ({service}) => {
           className="rounded-xl"
         />
       </figure>
+
       <div className="card-body">
         <h2 className="card-title font-bold text-[#444444]">{title}</h2>
         <div className="card-actions flex justify-between">
@@ -20,6 +22,7 @@ const ServiceCart = ({service}) => {
           <div className="text-2xl text-[#ff3811] cursor-pointer"><HiArrowSmallRight /></div>
         </div>
       </div>
+
     </div>
   );
 };
