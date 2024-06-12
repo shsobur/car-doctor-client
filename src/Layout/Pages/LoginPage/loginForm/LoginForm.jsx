@@ -3,6 +3,7 @@ import { FaGoogle } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import loginImg from "../../../../assets/images/login/login.svg";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   return (
@@ -87,14 +88,15 @@ const LoginForm = () => {
 
               </div>
               <p className="text-xs text-center sm:px-6 text-gray-600">
-                Don't have an account?
-                <a
+                Dont have an account?
+                <Link
+                  to="/register"
                   rel="noopener noreferrer"
                   href="#"
                   className="underline text-gray-800"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </div>
 
