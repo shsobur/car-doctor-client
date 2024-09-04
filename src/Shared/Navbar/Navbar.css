@@ -1,0 +1,47 @@
+.main_nav_bar_outer_container {
+  margin-bottom: 80px;
+}
+
+.main_nav_bar_inner_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0px;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  max-width: 1920px;
+  padding: 10px 50px;
+  font-family: "Inter", serif;
+  backdrop-filter: blur(10px);
+}
+
+.web_logo_container {
+  width: 70px;
+}
+
+.web_logo_container ing {
+  height: auto;
+  width: 100%;
+}
+
+#main_navigation_container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav_bar_btn button {
+  border: 2px solid #FF3811;
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF3811;
+}
+
+.nav_bar_btn button:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #ededed;
+}
