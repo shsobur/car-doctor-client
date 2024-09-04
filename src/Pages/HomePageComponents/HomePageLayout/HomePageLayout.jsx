@@ -1,3 +1,4 @@
+import AboutUs from "../AboutUs/AboutUs";
 import HomeBaner from "../HomeBaner/HomeBaner";
 
 const HomePageLayout = () => {
@@ -5,6 +6,7 @@ const HomePageLayout = () => {
     <>
       <div className="main_container">
         <HomeBaner></HomeBaner>
+        <AboutUs></AboutUs>
       </div>
     </>
   );
