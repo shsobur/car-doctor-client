@@ -23,3 +23,52 @@
   border-radius: 16px;
   background-color: #00000067;
 }
+
+.main_baner_title_container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 99;
+  padding-left: 40px;
+  color: #ffffff;
+}
+
+.main_baner_title_container h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.main_baner_title_container p {
+  padding: 20px 0;
+  font-size: 1.1rem;
+}
+
+#baner_btn-1 {
+  background-color: #FF3811;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#baner_btn-2 {
+  border: 2px solid #ffffff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 40px;
+}
+
+#baner_btn-1:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #da310f;
+}
+
+#baner_btn-2:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #ffffff2d;
+}

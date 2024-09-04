@@ -39,8 +39,15 @@ const HomeBaner = () => {
               <SwiperSlide><img src={img6} /></SwiperSlide>
             </Swiper>
 
-            <div className="baner_top_bg">
-              
+            <div className="baner_top_bg"></div>
+
+            <div className="main_baner_title_container">
+              <div>
+                <h2>Affordable Price <br/> For Car Servicing</h2>
+                <p>There are many variations of passages of  available,<br/> but the majority have suffered alteration in some form</p>
+                <button id="baner_btn-1">Discover More</button>
+                <button id="baner_btn-2">Latest Project</button>
+              </div>
             </div>
 
           </div>
