@@ -21,7 +21,7 @@
   z-index: 88;
   position: absolute;
   border-radius: 16px;
-  background-color: #00000067;
+  background: linear-gradient(90.00deg, #151515,#15151500 100%);
 }
 
 .main_baner_title_container {

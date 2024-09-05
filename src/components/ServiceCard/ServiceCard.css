@@ -1,0 +1,29 @@
+.main_service_card_container {
+  padding: 20px;
+  font-family: "Inter", serif;
+  border-radius: 8px;
+  border: 2px solid #E8E8E8;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main_service_card_container:hover {
+  transform: scale(1.1);
+}
+
+.service_card_img_container img{
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.service_card_info_container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #444444;
+  padding-top: 20px;
+}
+
+.service_card_info_container p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FF3811;
+}
