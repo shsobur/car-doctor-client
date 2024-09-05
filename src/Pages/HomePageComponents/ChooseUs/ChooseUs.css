@@ -7,7 +7,6 @@
 
 .main_choose_us_section_inner_container {
   font-family: "Inter", serif;
-  border: 2px solid purple;
 }
 
 .choose_us_section_top_container {
@@ -30,4 +29,44 @@
   font-size: 1rem;
   color: #737373;
   padding: 0 450px;
+}
+
+.choose_us_section_bottom_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  padding: 0 50px;
+}
+
+.choose_us_section_info_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px dashed #dadada;
+}
+
+.choose_us_section_info_container:hover {
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+  background-color: #FF3811;
+}
+
+.choose_us_section_img_container {
+  width: 60px;
+}
+
+.choose_us_section_img_container img{
+  width: 100%;
+}
+
+.choose_us_section_info_container h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #444444;
+  padding-top: 20px;
 }
