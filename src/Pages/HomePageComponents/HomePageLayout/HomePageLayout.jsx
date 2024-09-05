@@ -1,4 +1,5 @@
 import AboutUs from "../AboutUs/AboutUs";
+import Contact from "../Contact/Contact";
 import HomeBaner from "../HomeBaner/HomeBaner";
 
 const HomePageLayout = () => {
@@ -7,6 +8,7 @@ const HomePageLayout = () => {
       <div className="main_container">
         <HomeBaner></HomeBaner>
         <AboutUs></AboutUs>
+        <Contact></Contact>
       </div>
     </>
   );
