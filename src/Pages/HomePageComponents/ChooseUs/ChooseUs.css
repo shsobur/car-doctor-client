@@ -1,0 +1,33 @@
+.main_choose_us_section_outer_container {
+  height: 100%;
+  width: 100%;
+  padding: 0 50px;
+  margin-top: 100px;
+}
+
+.main_choose_us_section_inner_container {
+  font-family: "Inter", serif;
+  border: 2px solid purple;
+}
+
+.choose_us_section_top_container {
+  text-align: center;
+}
+
+.choose_us_section_top_container h3 {
+  font-size: 1.1rem;
+  color: #FF3811;
+  font-weight: 700;
+}
+
+.choose_us_section_top_container h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.choose_us_section_top_container p {
+  font-size: 1rem;
+  color: #737373;
+  padding: 0 450px;
+}

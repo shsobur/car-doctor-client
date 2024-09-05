@@ -1,4 +1,5 @@
 import AboutUs from "../AboutUs/AboutUs";
+import ChooseUs from "../ChooseUs/ChooseUs";
 import Contact from "../Contact/Contact";
 import HomeBaner from "../HomeBaner/HomeBaner";
 
@@ -9,6 +10,7 @@ const HomePageLayout = () => {
         <HomeBaner></HomeBaner>
         <AboutUs></AboutUs>
         <Contact></Contact>
+        <ChooseUs></ChooseUs>
       </div>
     </>
   );
