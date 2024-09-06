@@ -10,7 +10,11 @@ const SingUp = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-  console.log("🚀 ~ onSubmit ~ data:", data);
+    const name = data.name;
+    const email = data.email;
+    const password = data.password;
+
+    console.log(name, email, password);
   }
 
   return (
