@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import logo from "../../assets/logo/logo.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -72,7 +72,9 @@ const Navbar = () => {
             </div>
 
             <div className="nav_bar_btn">
-              <button>Appointment</button>
+              <Link to="/singin">
+                <button>Sing In</button>
+              </Link>
             </div>
           </nav>
         </div>
