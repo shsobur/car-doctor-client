@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../AuthenticationStyle/AuthenticationStyle.css";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { AuthContext } from "../../../components/AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SingIn = () => {
+  const {signInUser} = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -14,6 +20,32 @@ const SingIn = () => {
     const password = data.password;
 
     console.log(email, password);
+
+    signInUser(email, password)
+    .then(result => {
+      console.log(result.user)
+      // Sweet Alart__
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Signed in successfully"
+      });
+      // End
+      navigate("/");
+    })
+    .catch(error => {
+      console.log("Firebase Sing In Error", error);
+    })
   }
 
   return (
