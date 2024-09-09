@@ -4,6 +4,7 @@ import HomePageLayout from "../Pages/HomePageComponents/HomePageLayout/HomePageL
 import SingIn from "../Pages/Authentication/SingIn/SingIn";
 import SingUp from "../Pages/Authentication/SingUp/SingUp";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import Booking from "../Pages/Booking/Booking";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,12 @@ const router = createBrowserRouter([
       {
         path: "/checkout/:id",
         element: <CheckOut></CheckOut>,
-        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
+      },
+      {
+        path: "/booking",
+        element: <Booking></Booking>,
       },
       {
         path: "/singin",

@@ -19,6 +19,7 @@ const CheckOut = () => {
     const number = data.number.trim();
     const price = serviseData.price;
     const title = serviseData.title;
+    const image = serviseData.image;
 
     const booking = {
       customerName: name,
@@ -26,7 +27,8 @@ const CheckOut = () => {
       date,
       email,
       number,
-      price
+      price,
+      image
     }
 
     fetch("http://localhost:5000/bookings", {

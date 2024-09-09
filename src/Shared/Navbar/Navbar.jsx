@@ -78,14 +78,14 @@ const Navbar = () => {
                 </NavLink>
 
                 <NavLink
-                  to="/blog"
+                  to="/booking"
                   className={({ isActive }) =>
                     isActive
                       ? "text-[#FF3811] text-lg font-bold underline"
                       : "text-[#444444] text-lg font-bold"
                   }
                 >
-                  <li>Blog</li>
+                  <li>Booking</li>
                 </NavLink>
 
                 <NavLink

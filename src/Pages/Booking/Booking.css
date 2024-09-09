@@ -1,0 +1,43 @@
+.main_booking_outer_container {
+  height: 100%;
+  width: 100%;
+  padding: 0 50px;
+  font-family: "Inter", serif;
+}
+
+.main_booking_inner_container {
+  height: 100%;
+  width: 100%;
+}
+
+.booking_baner_main_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.booking_baner_img_container img {
+  height: auto;
+  width: 100%;
+}
+
+.booking_baner_overlay {
+  height: 100%;
+  width: 100%;
+  position:  absolute;
+  top: 0;
+  border-radius: 16px;
+  background: linear-gradient(90.00deg, #151515,#15151500 100%);
+}
+
+.booking_title {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
