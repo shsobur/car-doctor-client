@@ -1,0 +1,139 @@
+.main_check_out_outer_container {
+  height: 100%;
+  width: 100%;
+  padding: 0 50px;
+  font-family: "Inter", serif;
+}
+
+.main_check_out_inner_container {
+  height: 100%;
+  width: 100%;
+}
+
+.ckeck_out_main_img_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.ckeck_out_img_container { 
+  width: 100%;
+}
+
+.ckeck_out_img_container img {
+  height: auto;
+  width: 100%;
+}
+
+.ckeck_out_form_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ckeck_out_form_title h2 {
+  text-align: center;
+  margin-top: 100px;
+  color: #FF3811;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.check_out_img_overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  border-radius: 8px;
+  background: linear-gradient(90.00deg, #151515,#15151500 100%);
+}
+
+.check_out_title h2 {
+  position: absolute;
+  top: 40%;
+  padding: 0 0 0 50px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.main_check_out_form_container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 50px;
+  background-color: #F3F3F3;
+  padding: 100px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.ckeck_out_single_input_container input {
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+#check_out_imput-1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+#check_out_imput-2 {
+  grid-column-start: 7;
+  grid-column-end: -1;
+} 
+
+#check_out_imput-3 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+#check_out_imput-4 {
+  grid-column-start: 7;
+  grid-column-end: -1;
+}
+
+#ckeck_out_textarea-1 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+#check_out_imput-1 input {
+  width: 100%;
+}
+
+#check_out_imput-2 input {
+  width: 100%;
+}
+#check_out_imput-3 input {
+  width: 100%;
+}
+#check_out_imput-4 input {
+  width: 100%;
+}
+
+#ckeck_out_textarea-1 textarea {
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.check_out_form_btn {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.check_out_form_btn input {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #FF3811;
+}

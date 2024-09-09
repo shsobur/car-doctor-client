@@ -1,26 +1,29 @@
+import { Link } from "react-router-dom";
 import "./ServiceCard.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const ServiceCard = ({service}) => {
-  const {title, img, price} = service;
+const ServiceCard = ({ service }) => {
+  const { _id, title, img, price } = service;
 
   return (
     <>
-      <div className="main_service_card_container">
-        <div className="service_card_img_container">
-          <img src={img} />
+      <Link to={`/checkout/${_id}`}>
+        <div className="main_service_card_container">
+          <div className="service_card_img_container">
+            <img src={img} />
+          </div>
+          <div className="service_card_info_container">
+            <h2>{title}</h2>
+            <p>Price: ${price}</p>
+          </div>
         </div>
-        <div className="service_card_info_container">
-          <h2>{title}</h2>
-          <p>Price: ${price}</p>
-        </div>
-      </div>
+      </Link>
     </>
   );
 };
 
 ServiceCard.propTypes = {
-  service: PropTypes.object
-}
+  service: PropTypes.object,
+};
 
 export default ServiceCard;
