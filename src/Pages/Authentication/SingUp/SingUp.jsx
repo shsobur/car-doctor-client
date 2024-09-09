@@ -19,6 +19,7 @@ const SingUp = () => {
     const name = data.name;
     const email = data.email;
     const password = data.password;
+    
 
     console.log(name, email, password);
 

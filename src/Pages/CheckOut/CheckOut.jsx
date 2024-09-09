@@ -2,6 +2,7 @@ import "./CheckOut.css";
 import ckeckImg from "../../assets/images/checkout/checkout.png";
 import { useLoaderData } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const CheckOut = () => {
   const serviseData = useLoaderData();
@@ -12,21 +13,58 @@ const CheckOut = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const name = data.name;
-    const date = data.date;
-    const email = data.email;
-    const number = data.number;
+    const name = data.name.trim();
+    const date = data.date.trim();
+    const email = data.email.trim();
+    const number = data.number.trim();
     const price = serviseData.price;
+    const title = serviseData.title;
 
-    const order = {
-      customername: name,
+    const booking = {
+      customerName: name,
+      serviceName: title,
       date,
       email,
       number,
       price
     }
 
-    console.log(order);
+    fetch("http://localhost:5000/bookings", {
+      method: "POST",
+      headers: {
+        "content-type" : "application/json"
+      },
+      body: JSON.stringify(booking)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("🚀 ~ onSubmit ~ data:", data);
+      if(data.insertedId) {
+        console.log("worked");
+        // Swite Allart
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Signed in successfully"
+        });
+        // End
+      }
+    })
+    .catch(error => {
+      console.log("Booking error: ", error)
+    })
+
+    console.log(booking);
   };
 
   return (
