@@ -41,7 +41,7 @@ const CheckOut = () => {
       console.log("🚀 ~ onSubmit ~ data:", data);
       if(data.insertedId) {
         console.log("worked");
-        // Swite Allart
+        // Sweet Alert__
         const Toast = Swal.mixin({
           toast: true,
           position: "top",
@@ -55,9 +55,9 @@ const CheckOut = () => {
         });
         Toast.fire({
           icon: "success",
-          title: "Signed in successfully"
+          title: "Booking is on prosece..."
         });
-        // End
+        // End__
       }
     })
     .catch(error => {
@@ -84,8 +84,8 @@ const CheckOut = () => {
             </div>
 
             <div className="ckeck_out_form_title">
-              <h2>Service Name: {serviseData.title}</h2>
-              <h2>Price: ${serviseData.price}</h2>
+              <h2><span>Service:</span> {serviseData.title}</h2>
+              <h2><span>Price:</span> ${serviseData.price}</h2>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)}>

@@ -31,10 +31,14 @@
   justify-content: space-between;
 }
 
+.ckeck_out_form_title span {
+  color: #FF3811;
+}
+
 .ckeck_out_form_title h2 {
   text-align: center;
   margin-top: 100px;
-  color: #FF3811;
+  color: #151515;
   font-size: 2rem;
   font-weight: 700;
 }

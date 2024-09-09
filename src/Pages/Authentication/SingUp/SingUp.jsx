@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../../components/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../../components/SocialLogin/SocialLogin";
 
 const SingUp = () => {
   const { signUpUser } = useContext(AuthContext);
@@ -121,6 +122,10 @@ const SingUp = () => {
                       <span className="underline text-[#FF3811]">sing in</span>
                     </Link>
                   </p>
+                </div>
+
+                <div>
+                  <SocialLogin></SocialLogin>
                 </div>
 
               </form>

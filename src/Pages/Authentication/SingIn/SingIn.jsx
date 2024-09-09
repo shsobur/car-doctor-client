@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../../components/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../../components/SocialLogin/SocialLogin";
 
 const SingIn = () => {
   const {signInUser} = useContext(AuthContext);
@@ -102,6 +103,11 @@ const SingIn = () => {
                     </Link>
                   </p>
                 </div>
+
+                <div>
+                  <SocialLogin></SocialLogin>
+                </div>
+
               </form>
             </div>
 
