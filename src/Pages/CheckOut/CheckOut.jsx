@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const CheckOut = () => {
   const serviseData = useLoaderData();
+
   const {
     register,
     handleSubmit,
@@ -19,7 +20,7 @@ const CheckOut = () => {
     const number = data.number.trim();
     const price = serviseData.price;
     const title = serviseData.title;
-    const image = serviseData.image;
+    const image = serviseData.img;
 
     const booking = {
       customerName: name,
