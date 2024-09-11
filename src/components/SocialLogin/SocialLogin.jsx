@@ -2,14 +2,16 @@ import "./SocialLogin.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 // import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const SocialLogin = () => {
   const { googleSingIn } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
+  const path = location.state?.from?.pathname || "/";
 
   const handleGoogleLogin = () => {
     googleSingIn()
@@ -32,7 +34,7 @@ const SocialLogin = () => {
         title: "Signed in successfully"
       });
       // End__
-      navigate("/");
+      navigate(path, {replace: true});
     })
     .catch(error => {
       console.log("social log error: ", error);

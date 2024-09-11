@@ -1,11 +1,12 @@
 import "./CheckOut.css";
 import ckeckImg from "../../assets/images/checkout/checkout.png";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 const CheckOut = () => {
   const serviseData = useLoaderData();
+  const nevigate = useNavigate();
 
   const {
     register,
@@ -60,6 +61,7 @@ const CheckOut = () => {
           icon: "success",
           title: "Booking is on prosece..."
         });
+        nevigate("/booking");
         // End__
       }
     })

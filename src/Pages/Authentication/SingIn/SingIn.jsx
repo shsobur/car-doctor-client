@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../AuthenticationStyle/AuthenticationStyle.css";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
@@ -8,7 +8,9 @@ import SocialLogin from "../../../components/SocialLogin/SocialLogin";
 
 const SingIn = () => {
   const {signInUser} = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
+  const path = location?.state?.from?.pathname || "/";
 
   const {
     register,
@@ -42,7 +44,7 @@ const SingIn = () => {
         title: "Signed in successfully"
       });
       // End
-      navigate("/");
+      navigate(path, {replace: true});
     })
     .catch(error => {
       console.log("Firebase Sing In Error", error);

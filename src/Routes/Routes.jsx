@@ -5,6 +5,7 @@ import SingIn from "../Pages/Authentication/SingIn/SingIn";
 import SingUp from "../Pages/Authentication/SingUp/SingUp";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Booking from "../Pages/Booking/Booking";
+import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,13 +18,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/checkout/:id",
-        element: <CheckOut></CheckOut>,
+        element: <PrivetRoute><CheckOut></CheckOut></PrivetRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/services/${params.id}`),
       },
       {
         path: "/booking",
-        element: <Booking></Booking>,
+        element: <PrivetRoute><Booking></Booking></PrivetRoute>,
       },
       {
         path: "/singin",

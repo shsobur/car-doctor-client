@@ -17,17 +17,16 @@ const Navbar = () => {
       showCancelButton: true,
       confirmButtonColor: "#d33",
       cancelButtonColor: "#3085d6",
-      confirmButtonText: "Yes, logout"
+      confirmButtonText: "Yes, logout",
     }).then((result) => {
       if (result.isConfirmed) {
-        logOut()
-        .then(() => {
+        logOut().then(() => {
           Swal.fire({
             title: "Loged Out!",
             text: "Loged out, Now get out of hear -_-",
-            icon: "success"
+            icon: "success",
           });
-        })
+        });
       }
     });
     // End__
@@ -77,16 +76,18 @@ const Navbar = () => {
                   <li>Service</li>
                 </NavLink>
 
-                <NavLink
-                  to="/booking"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#FF3811] text-lg font-bold underline"
-                      : "text-[#444444] text-lg font-bold"
-                  }
-                >
-                  <li>Booking</li>
-                </NavLink>
+                {user && (
+                  <NavLink
+                    to="/booking"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#FF3811] text-lg font-bold underline"
+                        : "text-[#444444] text-lg font-bold"
+                    }
+                  >
+                    <li>Booking</li>
+                  </NavLink>
+                )}
 
                 <NavLink
                   to="/contact"

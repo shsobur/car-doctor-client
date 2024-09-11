@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const ServiceCard = ({ service }) => {
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const { _id, title, img, price } = service;
 
   return (

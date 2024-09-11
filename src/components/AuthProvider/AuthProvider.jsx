@@ -2,12 +2,15 @@ import PropTypes from 'prop-types';
 import auth from '../Firebase/firebase.config';
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,  signInWithPopup,  signOut } from "firebase/auth";
+import axios from 'axios';
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  console.log(user?.email)
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -22,12 +25,26 @@ const AuthProvider = ({children}) => {
   }
 
   const googleSingIn = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   }
 
   useEffect(() => {
     onAuthStateChanged((auth), currentUser => {
       setUser(currentUser);
+
+      if(currentUser) {
+        const userEmail = {email: currentUser.email}
+
+        axios.post("http://localhost:5000/jwt", userEmail)
+        .then(res => {
+          console.log(res.data);
+        })
+      }
+      else {
+        console.log("current user is missing");
+      }
+
       setLoading(false);
     })
   }, []);
