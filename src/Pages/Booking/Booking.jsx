@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Booking = () => {
   const { user } = useContext(AuthContext);
@@ -13,11 +14,11 @@ const Booking = () => {
   const url = `http://localhost:5000/bookings?email=${user.email}`;
 
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setBookings(data);
-      });
+    axios.get(url, {withCredentials: true})
+    .then(res => {
+      setBookings(res.data)
+    })
+    console.log()
   }, [url]);
 
   const handleDelete = (id) => {

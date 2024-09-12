@@ -8,9 +8,7 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  console.log(user?.email)
+  const [loading, setLoading] = useState(true);
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -33,16 +31,17 @@ const AuthProvider = ({children}) => {
     onAuthStateChanged((auth), currentUser => {
       setUser(currentUser);
 
-      if(currentUser) {
-        const userEmail = {email: currentUser.email}
+      const userEmail = {email: currentUser?.email}
+      console.log(userEmail);
 
-        axios.post("http://localhost:5000/jwt", userEmail)
+      if(currentUser) {
+        axios.post("http://localhost:5000/jwt", userEmail, {withCredentials: true})
         .then(res => {
           console.log(res.data);
         })
       }
-      else {
-        console.log("current user is missing");
+      else{
+        console.log("Current user is missing")
       }
 
       setLoading(false);
